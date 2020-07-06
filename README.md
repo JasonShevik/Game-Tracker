@@ -1,5 +1,5 @@
 # Game-tracker v2.8b
-This will be a modified version of the DnD initiative tracker that I put on Haxme. It will include tracking for additional RPGs and other games.
+This will be a modified version of my DnD initiative tracker. It will include tracking for additional RPGs and other games.
 
 ----------------
 Changelog:
