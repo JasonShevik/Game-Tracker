@@ -1,34 +1,26 @@
 # Game-tracker v2.8.4b
-This will be a modified version of the DnD initiative tracker that I put on Haxme. It will include tracking for additional RPGs and other games such as MTG
+This will be a modified version of the DnD initiative tracker that I put on Haxme. It will include tracking for additional RPGs and other games.
 
 ----------------
 Changelog:
 
-2.8.4b: Added a python program to fix loot tables which have newline characters between quotations. Tables formatted this way are improperly read by the Loot Table module. The program is in src >> lootTableDnD >> tableFix.py
+2.8b: Added a python program to fix loot tables which have newline characters between quotations. Tables formatted this way are improperly read by the Loot Table module. The program is in src >> lootTableDnD >> tableFix.py
 
-2.8.4a: Added borders and insets to the Initiative Tracker to improve the GUI.
+2.8a: Added borders and insets to the Initiative Tracker to improve the GUI.
 
-2.8.4: Made significant changes to the way that the ComboPopup.java GUI is programmed. It looks far more professional now. Everything is properly spaced with nice borders, and the create panel will be nicely centered and spaced when it pops up. Also added a "Pack" button to the menu bar so that if the window is resized, the user may then pack it back to the preferred size at will.
+2.8: Made significant changes to the way that the ComboPopup.java GUI is programmed. It looks far more professional now. Everything is properly spaced with nice borders, and the create panel will be nicely centered and spaced when it pops up. Also added a "Pack" button to the menu bar so that if the window is resized, the user may then pack it back to the preferred size at will.
 
-2.7.4: Removed the Dice.java class. Instead, ComboPopup.java will be the entry point for the Dice module. It was inconvenient to have to press the "My Combos" button in order to get to the combo list, since that's the main thing that people will be using the module for. I've added the 6 common dice to the JMenuBar, so they can still be easily used. Also implemented the "Cancel" button when people are trying to add a new combo.
+2.7: Removed the Dice.java class. Instead, ComboPopup.java will be the entry point for the Dice module. It was inconvenient to have to press the "My Combos" button in order to get to the combo list, since that's the main thing that people will be using the module for. I've added the 6 common dice to the JMenuBar, so they can still be easily used. Also implemented the "Cancel" button when people are trying to add a new combo.
 
-2.6.4: Removed the CreatePopup.java class. Instead, when users press the "Add" or "Edit" buttons on the ComboPopup Frame it calls a method to add a new JPanel and 5 buttons below the main components that start in the frame. This new set of components allow users to create or edit their combo. Upon pressing the "Accept" or "Cancel" buttons amongst the new components, it will remove all of the new components and take the appropriate action for the combo database. This is not yet fully implemented. Currently only the "Add" button functions. None of the new components function, nor do the original "Edit", "Remove", or "Roll" buttons.
+2.6: Removed the CreatePopup.java class. Instead, when users press the "Add" or "Edit" buttons on the ComboPopup Frame it calls a method to add a new JPanel and 5 buttons below the main components that start in the frame. This new set of components allow users to create or edit their combo. Upon pressing the "Accept" or "Cancel" buttons amongst the new components, it will remove all of the new components and take the appropriate action for the combo database. This is not yet fully implemented. Currently only the "Add" button functions. None of the new components function, nor do the original "Edit", "Remove", or "Roll" buttons.
 
-2.5.4: Fixed an error in the MetaCombo class with the getCombos() method. Also fixed a NullPointerException issue in the Initiative tracker that would trigger if someone pressed "cancel" on the name popup.
+2.5: Fixed an error in the MetaCombo class with the getCombos() method. Also fixed a NullPointerException issue in the Initiative tracker that would trigger if someone pressed "cancel" on the name popup.
 
-2.4.4: Fixed the NullPointerException in ComboPopup as well as many previously unknown errors. Added a JMenuBar and the ability to load a database *after* clicking "My Combos". There is currently no way to create a combo database. 
+2.4: Fixed the NullPointerException in ComboPopup as well as many previously unknown errors. Added a JMenuBar and the ability to load a database *after* clicking "My Combos". There is currently no way to create a combo database. 
 
-2.3.4: Mostly made changes to the Combo, MetaCombo, and ComboPopup classes. Removed the Chain subclass in Combo.java and just added a global Combo object that allows them to serve as linked lists. Having a subclass that did nothing other than hold such an object was pointless. Much of ComboPopup.java has been added, but there is an issue with the File Handling section that causes a NullPointerException.
+2.3: Mostly made changes to the Combo, MetaCombo, and ComboPopup classes. Removed the Chain subclass in Combo.java and just added a global Combo object that allows them to serve as linked lists. Having a subclass that did nothing other than hold such an object was pointless. Much of ComboPopup.java has been added, but there is an issue with the File Handling section that causes a NullPointerException.
 
-2.2.4: Added in documentation for MTGLifePointTracker.java.
-
-2.2.3: Fixed the Dice module front GUI to look nicer. Implemented all 6 common dice buttons using SecureRandom rather than Math.random so that DMs should be more comfortable using it. These random numbers are cryptographically secure and non-deterministic. Also added a JMenuItem to generate a .txt file with 1 million d20 rolls, and a Matlab program to graph their distribution. The Matlab program as well as a sample Dist.txt file and screenshot of the distribution have been included in the Dist directory. Also made changes to the Combo.java and MetaCombo.java classes. MetaCombos will hold an ArrayList of Combo Objects, and now Chain objects extend Combos so that these ArrayLists may also hold Linked Lists of Combos for ogranization/grouping.
-
-2.1.3: Fixed issue where MTGLifeTracker mainFrame was crudely updated, causing the frame to move when a player has taken damage or healed. Before this patch, information in mainFrame was updated by disposing of the panel and regenerating it. Now, each Player object has a JLabel that will be updated. Also, MTGLifePointTracker's setDefaultCloseOperation changed to take dispose argument rather than exit argument.
-
-2.1.2: Changed file extentions in initiativeDnD from having java files with ".Java" to ".java". Added package declaration to MTGLifeTracker. Moved position of setVisible in MTGLifeTracker. Removed setDefaultLookAndFeelDecorated in MTGLifeTracker, eliminating a glitch in the UI changing upon doing damage to player or healing player. Still more glitches to be fixed.
-
-2.1.1: Added the MTG module with some minor glitches.
+2.2: Fixed the Dice module front GUI to look nicer. Implemented all 6 common dice buttons using SecureRandom rather than Math.random so that DMs should be more comfortable using it. These random numbers are cryptographically secure and non-deterministic. Also added a JMenuItem to generate a .txt file with 1 million d20 rolls, and a Matlab program to graph their distribution. The Matlab program as well as a sample Dist.txt file and screenshot of the distribution have been included in the Dist directory. Also made changes to the Combo.java and MetaCombo.java classes. MetaCombos will hold an ArrayList of Combo Objects, and now Chain objects extend Combos so that these ArrayLists may also hold Linked Lists of Combos for ogranization/grouping.
 
 2.1: Started work on a Dice Manager module. *Nothing is implemented yet*. This will allow people to make databases with custom saved dice combinations (such as 2d6+2) that will automatically do the roll for you, as well as graph the probability distribution for that combo. Ideally, this module will also allow you to group combos together for complex actions, and allow naming each combo within the meta-combo (eg. "hit" = 1d20+4, "dmg" = 2d6+2)
 
@@ -50,7 +42,7 @@ Changelog:
 
 1.0: Moved the initiative tracker to its own package and made the main class into a menu to select different modules
 
-0.9: Original version by Freak posted on Haxme that only included the initiative tracker
+0.9: Original version that only included the initiative tracker
 
 # Wiki Grabber v1.0
 This will pull the stats for every single 5e monster on dandwiki (https://www.dandwiki.com/wiki/5e_Monsters) and puts the information into individual .csv files for a comprehensive database.
