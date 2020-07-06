@@ -1,0 +1,20 @@
+To do list:
+
+Initiative tracker:
+* Implement the wiki database with custom monster popups
+* On the monster popups include a button that launches the wiki page in default browser
+* Incorporate the Dice Manager into the MenuBar of Initiative Tracker once the Dice are done
+* Add Insets so that it's not so cramped.
+
+Wiki grabber:
+* Allow spellcasting (as in Abominable Yeti Mage)
+
+
+Dice:
+* Finish the event stuff for ComboPopup.
+* Do the ResultsPopup class.
+
+
+Loot:
+* Make Loot.java attempt to automatically load a default database if there is one in the same directory
+* Fix the loot table and test this module against that version
